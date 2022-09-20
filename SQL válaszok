@@ -1,0 +1,16 @@
+-- 1. Hogy hívják az egyes pizzafutárokat?
+SELECT DISTINCT `fnev` FROM `futar`;
+
+-- 2. Milyen pizzák vannak és mennyibe kerülnek?
+SELECT `pnev`, `par` FROM `pizza`;
+
+-- 3. Mennyibe kerül átlagosan egy pizza?
+Select AVG(`par`) from `pizza`;
+
+-- 4. Mely pizzák olcsóbbak 2000 Ft-nál?
+Select `pnev` from `pizza` where `par`<2000;
+
+-- 5. Első rendelést ki szállította ki?
+SELECT `futar`.`fnev` FROM `rendeles`, `futar` WHERE `futar`.`fazon`=`rendeles`.`fazon` and `razon`=1
+
+-- 6. 
